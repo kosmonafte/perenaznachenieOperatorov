@@ -26,7 +26,7 @@ public:
 		for (int i = 0; i < plenty.size; i++) {
 			this->array[i] = plenty.array[i];
 		}
-		this->size = size;
+		this->size = plenty.size;
 	}
 	~Plenty() {
 		if (this->array) {
@@ -35,7 +35,12 @@ public:
 	}
 	
 	std::string getElements();
+	int getElement(int x);
 	void addElement(int x);
+	void delElement(int x);
 	void operator+(const int& x);
+	Plenty operator+(Plenty& plenty);
+	Plenty operator+=(Plenty& plenty);
+	void operator+=(const int& x);
 };
 

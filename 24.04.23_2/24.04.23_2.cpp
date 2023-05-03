@@ -7,19 +7,35 @@ using namespace std;
 int main()
 {
     int* array = new int[7] {1,2,3,4,5,6,7};
-    int* array2 = new int[7] {13, 12, 73, 34, 65, 86, 70};
+    int* array2 = new int[7] {13, 12, 3, 34, 4, 86, 1};
     Plenty plenty(array, 7);
+    Plenty plenty2(array2, 7);
     cout << plenty.getElements() << endl;
-    plenty.addElement(5);
-    plenty.addElement(20);
-    plenty.addElement(234);
-    cout << plenty.getElements();
-    plenty + 4;
-    plenty + 34;
-    plenty + 41;
-    cout << plenty.getElements();
+    cout << plenty2.getElements() << endl;
+    plenty + 23;
+    plenty += 54;
+    plenty + 23;
+    plenty + 54;
+    plenty + 132;
+    cout << plenty.getElements() << endl;
+    cout << plenty.getElement(2);
     cout << endl << endl;
-    cout << plenty;
+
+    Plenty plenty3 = plenty += plenty2;
+    cout << plenty3;
+    plenty3.delElement(223);
+    cout << endl << endl;
+    cout << plenty3;
+    //plenty.addElement(5);
+    //plenty.addElement(20);
+    //plenty.addElement(234);
+    //cout << plenty.getElements();
+    //plenty + 4;
+    //plenty + 34;
+    //plenty + 41;
+    //cout << plenty.getElements();
+    //cout << endl << endl;
+    //cout << plenty;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
